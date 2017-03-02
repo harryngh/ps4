@@ -1,0 +1,15 @@
+### Starting build.
+# Target: orderedcoll.ml.depends, tags: { extension:ml, file:orderedcoll.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str, warn(A-4-33-40-41-42-43-34-44) }
+ocamlfind ocamldep -modules orderedcoll.ml > orderedcoll.ml.depends
+# Target: order.ml.depends, tags: { extension:ml, file:order.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str, warn(A-4-33-40-41-42-43-34-44) }
+ocamlfind ocamldep -modules order.ml > order.ml.depends # cached
+# Target: order.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:order.cmo, file:order.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str, warn(A-4-33-40-41-42-43-34-44) }
+ocamlfind ocamlc -c -thread -strict-sequence -w A-4-33-40-41-42-43-34-44 -o order.cmo order.ml # cached
+# Target: orderedcoll.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:orderedcoll.cmo, file:orderedcoll.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str, warn(A-4-33-40-41-42-43-34-44) }
+ocamlfind ocamlc -c -thread -strict-sequence -w A-4-33-40-41-42-43-34-44 -o orderedcoll.cmo orderedcoll.ml
++ ocamlfind ocamlc -c -thread -strict-sequence -w A-4-33-40-41-42-43-34-44 -o orderedcoll.cmo orderedcoll.ml
+File "orderedcoll.ml", line 318, characters 8-19:
+Warning 32: unused value test_delete.
+# Target: orderedcoll.byte, tags: { byte, dont_link_with, extension:byte, file:orderedcoll.byte, link, ocaml, program, quiet, strict-sequence, thread, traverse, use_str, warn(A-4-33-40-41-42-43-34-44) }
+ocamlfind ocamlc -linkpkg str.cma -thread order.cmo orderedcoll.cmo -o orderedcoll.byte
+# Compilation successful.

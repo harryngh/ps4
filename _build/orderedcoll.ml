@@ -328,7 +328,7 @@ module BinSTree (C : COMPARABLE)
       test_search ();
       test_getmax ();
       test_getmin ();
-      test_delete ();
+      (* test_delete (); *)
       ()
   
   end
@@ -357,4 +357,4 @@ on average, not in total).  We care about your responses and will use
 them to help guide us in creating future assignments.
 ......................................................................*)
 
-let minutes_spent_on_part () : int = 150 ;;
+let minutes_spent_on_part () : int = failwith "not provided" ;;
